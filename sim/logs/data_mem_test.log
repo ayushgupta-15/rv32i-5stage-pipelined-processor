@@ -1,0 +1,9 @@
+Starting Data Memory Tests...
+PASS: Address 0 -> 42
+PASS: Address 0 -> 10
+PASS: Address 4 -> 20
+PASS: Address 8 -> 30
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/data_mem_tb.v:73: $finish called at 90000 (1ps)

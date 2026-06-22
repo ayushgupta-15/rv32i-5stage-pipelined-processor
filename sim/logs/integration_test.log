@@ -1,0 +1,10 @@
+WARNING: rtl/components/inst_mem.v:13: $readmemh(programs/hex/jal_program.hex): Not enough words in the file for the requested range [0:255].
+Starting Single-Cycle Integration Tests (JAL Stage)...
+--- Cycle 1: JAL PC=00000000 ---
+--- Cycle 2: Target PC=00000008 ---
+--- Final State ---
+x1 = 4
+x2 = 0
+x3 = 42
+
+tb/integration/tb_single_cycle.v:45: $finish called at 45000 (1ps)

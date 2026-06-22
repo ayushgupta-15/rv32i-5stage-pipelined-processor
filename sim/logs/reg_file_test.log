@@ -1,0 +1,8 @@
+Starting Register File Tests...
+PASS: Test 1 (Write x5=42, Read x5)
+PASS: Test 2 (Write x10=0x12345678, Read x10)
+PASS: Test 3 (Write x0=999, Read x0 returns 0)
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/reg_file_tb.v:86: $finish called at 70000 (1ps)

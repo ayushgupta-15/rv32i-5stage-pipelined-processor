@@ -1,0 +1,13 @@
+Starting ALU Tests...
+PASS: ADD
+PASS: SUB
+PASS: ZERO Flag
+PASS: AND
+PASS: OR
+PASS: XOR
+PASS: SLT (Signed)
+PASS: SLTU (Unsigned)
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/alu_tb.v:119: $finish called at 90000 (1ps)

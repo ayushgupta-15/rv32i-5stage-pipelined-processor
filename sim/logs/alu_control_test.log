@@ -1,0 +1,14 @@
+Starting ALU Control Tests...
+PASS: ALUOp 00 (LW/SW -> ADD)
+PASS: ALUOp 01 (Branch -> SUB)
+PASS: ALUOp 10, f3=000, f7=0 (ADD)
+PASS: ALUOp 10, f3=000, f7=1 (SUB)
+PASS: ALUOp 10, f3=111 (AND)
+PASS: ALUOp 10, f3=110 (OR)
+PASS: ALUOp 10, f3=100 (XOR)
+PASS: ALUOp 10, f3=010 (SLT)
+PASS: ALUOp 10, f3=011 (SLTU)
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/alu_control_tb.v:73: $finish called at 90000 (1ps)

@@ -1,0 +1,9 @@
+WARNING: rtl/components/inst_mem.v:11: $readmemh(programs/hex/program.hex): Not enough words in the file for the requested range [0:255].
+Starting Instruction Memory Tests...
+PASS: PC=0 (ADDI x1, x0, 5)
+PASS: PC=4 (ADDI x2, x0, 3)
+PASS: PC=8 (ADD x3, x1, x2)
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/inst_mem_tb.v:45: $finish called at 40000 (1ps)

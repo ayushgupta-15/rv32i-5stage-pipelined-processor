@@ -1,0 +1,12 @@
+Starting Control Unit Tests...
+PASS: R-Type
+PASS: ADDI
+PASS: LW
+PASS: SW
+PASS: BEQ
+PASS: JAL
+PASS: LUI
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/control_tb.v:82: $finish called at 80000 (1ps)

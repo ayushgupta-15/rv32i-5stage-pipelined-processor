@@ -1,0 +1,10 @@
+Starting Immediate Generator Tests...
+PASS: I-Type (ADDI x1, x0, 5) -> 5
+PASS: S-Type (SW x1, 16(x2)) -> 16
+PASS: B-Type (BEQ x1, x2, -8) -> -8
+PASS: U-Type (LUI x1, 0x12345) -> 0x12345000
+PASS: J-Type (JAL x1, -4) -> -4
+---------------------------------
+ALL TESTS PASSED!
+---------------------------------
+tb/unit/imm_gen_tb.v:77: $finish called at 50000 (1ps)
