@@ -1,0 +1,20 @@
+name: RV32I Processor Validation CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Icarus Verilog
+      run: sudo apt-get update && sudo apt-get install -y iverilog
+
+    - name: Run Validation Suite
+      run: make validate
