@@ -5,7 +5,7 @@ module tb_validation;
     reg reset;
     reg [255:0] test_name;
 
-    riscv_single_cycle dut (
+    riscv_pipeline dut (
         .clk(clk),
         .reset(reset)
     );
@@ -54,6 +54,12 @@ module tb_validation;
                 $display("PASS");
             else
                 $display("FAIL: x1=%0d, x2=%0d, x3=%0d", dut.rf.registers[1], dut.rf.registers[2], dut.rf.registers[3]);
+        end
+        else if (test_name == "load_use") begin
+            if (dut.rf.registers[2] == 154)
+                $display("PASS");
+            else
+                $display("FAIL: x2=%0d", dut.rf.registers[2]);
         end
         else if (test_name == "dependency") begin
             if (dut.rf.registers[1] == 5 && dut.rf.registers[2] == 8 && dut.rf.registers[3] == 13)

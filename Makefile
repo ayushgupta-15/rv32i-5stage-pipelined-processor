@@ -162,16 +162,16 @@ test_integration: $(SIM_DIR)/integration_test
 	@$(VVP) $(SIM_DIR)/integration_test > $(SIM_DIR)/logs/integration_test.log
 	@cat $(SIM_DIR)/logs/integration_test.log
 
-$(SIM_DIR)/integration_test: $(TB_DIR)/integration/tb_single_cycle.v $(RTL_DIR)/core/riscv_single_cycle.v $(RTL_DIR)/components/*.v
+$(SIM_DIR)/integration_test: $(TB_DIR)/integration/tb_pipeline.v $(RTL_DIR)/core/riscv_pipeline.v $(RTL_DIR)/components/*.v $(RTL_DIR)/pipeline/*.v
 	@mkdir -p $(SIM_DIR)/logs $(SIM_DIR)/waves
 	@$(IVERILOG) -o $@ $^
 
 # ----------------------------------------------------
 # Validation Tests (Phase 2.5)
 # ----------------------------------------------------
-VALIDATE_TESTS = arith memory branch_taken branch_not_taken jal dependency mixed
+VALIDATE_TESTS = arith memory branch_taken branch_not_taken jal dependency mixed load_use
 
-$(SIM_DIR)/tb_validation: $(TB_DIR)/integration/tb_validation.v $(RTL_DIR)/core/riscv_single_cycle.v $(RTL_DIR)/components/*.v
+$(SIM_DIR)/tb_validation: $(TB_DIR)/integration/tb_validation.v $(RTL_DIR)/core/riscv_pipeline.v $(RTL_DIR)/components/*.v $(RTL_DIR)/pipeline/*.v
 	@mkdir -p $(SIM_DIR)/validate
 	@$(IVERILOG) -o $@ $^
 

@@ -12,8 +12,11 @@ module reg_file (
     reg [31:0] registers [31:0];
 
     // Asynchronous read with x0 hardwired to 0
-    assign read_data1 = (read_reg1 == 5'd0) ? 32'd0 : registers[read_reg1];
-    assign read_data2 = (read_reg2 == 5'd0) ? 32'd0 : registers[read_reg2];
+    assign read_data1 = (read_reg1 == 5'd0) ? 32'd0 : 
+                        ((reg_write && (write_reg == read_reg1)) ? write_data : registers[read_reg1]);
+
+    assign read_data2 = (read_reg2 == 5'd0) ? 32'd0 : 
+                        ((reg_write && (write_reg == read_reg2)) ? write_data : registers[read_reg2]);
 
     // Synchronous write (with x0 write protection)
     always @(posedge clk) begin

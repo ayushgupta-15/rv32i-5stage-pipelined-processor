@@ -5,8 +5,8 @@ module tb_single_cycle;
     reg clk;
     reg reset;
 
-    riscv_single_cycle #(
-        .INIT_FILE("programs/hex/jal_program.hex")
+    riscv_pipeline #(
+        .INIT_FILE("programs/hex/branch_not_taken.hex")
     ) dut (
         .clk(clk),
         .reset(reset)
